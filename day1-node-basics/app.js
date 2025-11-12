@@ -15,7 +15,7 @@ console.log(chalk.green("Arithmetic Operations:"));
 result.forEach((res) => console.log(chalk.blue(res)));
 
 result.forEach((res) => {
-  fs.appendFileSync("history.txt", res + "\n", "utf-8");
+  fs.appendFileSync("./history.txt", res + "\n", "utf-8");
 });
 
 console.log(chalk.yellow("\n Results saved"));
