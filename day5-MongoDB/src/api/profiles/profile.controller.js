@@ -1,6 +1,7 @@
 
 const Profile = require('../../models/profile.model');
 
+
 exports.createProfile = async (req, res, next) => {
   try {
     const { bio, age, gender, address, userId } = req.body;
