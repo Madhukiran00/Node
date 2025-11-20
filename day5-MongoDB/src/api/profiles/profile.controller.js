@@ -1,5 +1,5 @@
 
-const Profile = require('../models/profile.model');
+const Profile = require('../../models/profile.model');
 
 exports.createProfile = async (req, res, next) => {
   try {

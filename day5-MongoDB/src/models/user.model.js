@@ -7,7 +7,7 @@ const userSchema = new mongoose.Schema({
   phoneNumber: { type: String },
   isActive: { type: Boolean, default: true }
 }, {
-  timestamps: true // creates createdAt and updatedAt automatically
+  timestamps: true 
 });
 
 userSchema.index({ name: 'text', email: 'text' });

@@ -1,7 +1,7 @@
 require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
-const { connectDB } = require('./config/db');
+const { connectDB } = require('./src/config/db');
 const errorHandler = require('./src/middlewares/error.handler');
 
 const app = express();
@@ -10,9 +10,12 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// REGISTER ROUTES  ⬇⬇⬇⬇⬇⬇⬇⬇
-const userRoutes = require('./src/api/users.route');
+// REGISTER ROUTES 
+const userRoutes = require('./src/api/users/users.route');
 app.use('/api/users', userRoutes);
+
+const profileRoutes = require('./src/api/profiles/profiles.route');
+app.use('/api/profiles', profileRoutes);
 
 // Error Handler
 app.use(errorHandler);
