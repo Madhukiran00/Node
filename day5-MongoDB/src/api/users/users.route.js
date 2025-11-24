@@ -8,7 +8,7 @@ router.post('/', controller.createUser);
 // get list with 
 router.get('/', controller.getUsers);
 
-// get single
+// get single  
 router.get('/:id', controller.getUserById);
 
 // update

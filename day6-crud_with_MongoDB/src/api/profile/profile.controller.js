@@ -27,7 +27,7 @@ exports.getAllProfiles = async (req, res, next) => {
   }
 };
 
-// get  one
+// get by id 
 exports.getProfileById = async (req, res, next) => {
   try {
     const data = await profileService.getProfileById(req.params.id);
@@ -40,7 +40,7 @@ exports.getProfileById = async (req, res, next) => {
   }
 };
 
-// update
+// update 
 exports.updateProfile = async (req, res, next) => {
   try {
     const data = await profileService.updateProfile(req.params.id, req.body);

@@ -11,5 +11,5 @@ const profileSchema = new Schema({
   timestamps: true
 });
 
-const Profile = mongoose.model('Profile', profileSchema);
-module.exports = Profile;
+
+module.exports.Profile = mongoose.model('Profile', profileSchema);

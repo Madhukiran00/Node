@@ -23,22 +23,17 @@ exports.getUsers = async (req, res, next) => {
 
     const { total, users } = await userService.getUsers(search, page, limit);
 
-    res.json({
-      success: true,
-      total,
-      page,
-      limit,
-      data: users,
+    res.json({success: true,total,page,limit,data: users,
     });
   } catch (err) {
     next(err);
   }
 };
 
-// Get By ID
+// Get by id 
 exports.getUserById = async (req, res, next) => {
   try {
-    const user = await userService.getById(req.params.id);
+    const user = await userService.getUserById(req.params.id);
     if (!user)
       return res.status(404).json({ success: false, message: "User not found" });
 

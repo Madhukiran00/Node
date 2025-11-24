@@ -14,7 +14,7 @@ router.get("/:id", profileController.getProfileById);
 // update profile
 router.put("/:id", profileController.updateProfile);
 
-// update  profile
+// delete  profile
 router.delete("/:id", profileController.deleteProfile);
 
 module.exports = router;
